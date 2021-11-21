@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>MAC Address Validation</title>
+</head>
+	
+<body>
+<script type = "text/javascript">
+var str = prompt("Enter the MAC Address", "");
+function mac()
+	{
+		let regexm = /^([0-9a-fA-F]{2}[:.-]?){5}[0-9a-fA-F]{2}$/;
+		let result = str.match(regexm);
+		if(!result)
+			{
+				return ("Invalid MAC Address");
+			}
+		else
+			{
+				return ("Valid MAC Address");
+			}
+}
+alert(mac(str))
+</script>
+</body>
+</html>
